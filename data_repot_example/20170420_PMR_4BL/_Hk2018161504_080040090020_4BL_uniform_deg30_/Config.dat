@@ -1,0 +1,205 @@
+// 6-Layer Hysteresis Loop
+/////////////////////////////////////////////////////////
+0             // Set GPU device
+8             // BLOCK_SIZE_X (Kernel cnofiguration)
+8             // BLOCK_SIZE_Y (Kernel cnofiguration)
+2             // BLOCK_SIZE_Z (Kernel cnofiguration)
+2             // BLK_SZ_Z (Kernel cnofiguration)
+/////////////////////////////////////////////////////////
+24        // mNx
+24        // mNy
+18        // mNz
+6         // mNz_1
+8         // mNz_2
+10        // mNz_3
+12        // mNz_4
+15        // mNz_5
+15        // mNz_6
+2         // nz_12
+2         // nz_23
+2         // nz_34
+2         // nz_45
+0         // nz_56
+/////////////////// Media type and configuration ////////////////
+0         // media type: 0=normal;  1=short-ranged ordering (sro)
+350       // number of Voronoi grains                      (for normal media type)
+1.0       // minimum distance between seeds                (for normal media type)
+0.0       // grain boundary                                (for normal media type)
+8         // number of Voronoi domains                     (for sro media type)
+7.00      // regular grain-grain pitch                     (for sro media type)
+0.8       // regular grain size scaling [<1.0, >0.6]       (for sro media type)
+0.850     // domain-domain boundary quality factor         (for sro media type)
+/////////////////////////////////////////////////////////
+60000       // Total time
+59000       // EQUI_START_TIME
+/////////////////////////////////////////////////////////
+0             // true/false for demagnetization field
+10            // Demag update time interval (DmagINT)
+0.4           // Demag factor (DmagFAC)
+/////////////////////////////////////////////////////////
+3.0e-7        // Grain size in x
+3.0e-7        // Grain size in y
+3.0e-7        // delta_x
+3.0e-7        // delta_y
+1.0e-7        // delta_z
+2.0e-14       // delta_t
+/////////////////////////////////////////////////////////
+7777          // Random seed for Hth
+0             // Thermal on/off
+000.          // Temperature
+/////////////////////////////////////////////////////////
+1.00        // Initial field1 for major/minor loops (normalized to 1)
+30.0        // Field angle1 for major/minor loops
+0.000       // Initial field12 for major/minor loops (normalized to 1)
+0.00        // Field angle12 for major/minor loops
+1.00        // Initial field2 for major/minor loops (normalized to 1)
+30.0        // Field angle2 for major/minor loops
+0.000       // Initial field23 for major/minor loops (normalized to 1)
+0.00        // Field angle23 for major/minor loops
+1.00        // Initial field3 for major/minor loops (normalized to 1)
+30.0        // Field angle3 for major/minor loops
+0.00        // Initial field34 for major/minor loops (normalized to 1)
+0.00        // Field angle34 for major/minor loops
+1.00        // Initial field4 for major/minor loops (normalized to 1)
+30.0        // Field angle4 for major/minor loops
+0.00        // Initial field45 for major/minor loops (normalized to 1)
+0.00        // Field angle45 for major/minor loops
+1.00        // Initial field5 for major/minor loops (normalized to 1)
+30.0        // Field angle5 for major/minor loops
+0.00        // Initial field56 for major/minor loops (normalized to 1)
+0.00        // Field angle56 for major/minor loops
+1.00        // Initial field6 for major/minor loops (normalized to 1)
+30.0        // Field angle6 for major/minor loops
+-3000       // Initial Field Scaling Factor
+/////////////////////////////////////////////////////////
+700           // M1_Ms
+7000000       // M1_Ku
+1.60e-6       // M1_Aex
+0.000         // M1_Hex_l
+0.100         // M1_dHk_scale
+0.400         // M1_alpha
+0.080         // BL12
+0.000         // dBL12_scale
+800           // BL12_Ms
+0.0           // BL12_Hex_l
+/////////////////////////////////////////////////////////
+700           // M2_Ms
+6300000       // M2_Ku
+1.60e-6       // M2_Aex
+0.000         // M2_Hex_l
+0.080         // M2_dHk_scale
+0.400         // M2_alpha
+0.040         // BL23
+0.000         // dBL23_scale
+800           // BL23_Ms
+0.0           // BL23_Hex_l
+/////////////////////////////////////////////////////////
+700           // M3_Ms
+5600000       // M3_Ku
+1.60e-6       // M3_Aex
+0.000         // M3_Hex_l
+0.060         // M3_dHk_scale
+0.400         // M3_alpha
+0.090         // BL34
+0.000         // dBL34_scale
+800           // BL34_Ms
+0.0           // BL34_Hex_l
+/////////////////////////////////////////////////////////
+700           // M4_Ms
+5250000       // M4_Ku
+1.60e-6       // M4_Aex
+0.000         // M4_Hex_l
+0.060         // M4_dHk_scale
+0.400         // M4_alpha
+0.020         // BL45
+0.000         // dBL45_scale
+800           // BL45_Ms
+0.0           // BL45_Hex_l
+/////////////////////////////////////////////////////////
+700           // M5_Ms
+1400000       // M5_Ku
+1.60e-6       // M5_Aex
+0.020         // M5_Hex_l
+0.050         // M5_dHk_scale
+0.400         // M5_alpha
+0.000         // BL56
+0.000         // dBL56_scale
+1.0           // BL56_Ms
+0.0           // BL56_Hex_l
+/////////////////////////////////////////////////////////
+1.0           // M6_Ms
+0000000       // M6_Ku
+0.00e-6       // M6_Aex
+0.00          // M6_Hex_l                                    
+0.000         // M6_dHk_scale                                    
+0.1           // M6_alpha
+/////////////////////////////////////////////////////////
+0             // PMR (0) or HAMR-rLLG (1) (logic) (MODEL)
+1             // delta Hk        (logic)
+0             // delta Aex       (logic)
+0             // delta Tc        (logic)
+0             // Voronoi Grains  (logic)
+1             // MH_LOOP         (logic)
+0             // AFC             (logic)
+2             // the layer label of the AF layer (AF_layer_label)
+0             // 3D Recording Analysis (FULL_REC) (logic)
+0             // EXT_FP_PROFILE  (logic)
+0             // PRE_DEFINED_PATTERN  Pre-defined pattern                        (logic)
+0             // Defects in CGC (CGC_DEF: 1 -> Vacancy-type, 2 -> Pinning-type)  (logic)
+4             // CGC layer label (CGC_label)           (logic)
+0.00          // Defects percentage in CGC (def_perc)  (logic)
+0             // AC-erased (1) or DC-erased (0)        (logic)
+0             // DT Recording Analysis(DT_Rec_Analysis)(x0-x14,y0) (logic)
+49            // x0 (DT_x0)
+66            // y0 (DT_y0)
+0             // CT Recording Analysis(CT_Rec_Analysis)(x0-TBD,y-TBD) (logic)
+57            // x0 (CT_x0)
+67            // y0 (CT_y0)
+/////////////////////////////////////////////////////////
+500        // time step (Field sweeping rate for loop) (1250)
+100        // field step (Field sweeping rate for loop)
+1          // Scaling factor of field step after nucleation point
+/////////////////// Head field dimension ////////////////
+135       // fNx (ideal to be 3 times larger than mNx)
+135       // fNy (ideal to be 3 times larger than mNy)
+14        // fNz (ideal to be the same as mNz)
+45        // x coordinate of left-bottom corner (fNx0)
+54        // y coordinate of left-bottom corner (fNy0)
+0         // z coordinate of left-bottom corner (fNz0)
+1         // a reference x coordinate that indicates the starting trailing edge of the field profile (f_x0)
+/////////////////// Recording Process ///////////////////
+20e-7     // sBL: shortest bit length [cm]
+0.0       // v: head velocity [cm/s] (REC_MODE=0)
+5         // number of the shortest field cycle (sfNc) (number of bits)
+/////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////// 
+6    // mNz_1
+8    // mNz_12
+10    // mNz_2
+12    // mNz_23
+14    // mNz_3
+16    // mNz_34
+18    // mNz_4
+20    // mNz_45
+23    // mNz_5
+23    // mNz_56
+23    // mNz_6
+24    // mNz
+///////////////////////////////////////////////////////// 
+  20000.0000    // L1_Hk Oe
+  18000.0000    // L2_Hk Oe
+  16000.0000    // L3_Hk Oe
+  15000.0000    // L4_Hk Oe
+   4000.0000    // L5_Hk Oe
+      0.0000    // L6_Hk Oe
+///////////////////////////////////////////////////////// 
+0.000e+00    // L1_Hex_L (Oe)
+0.000e+00    // L2_Hex_L (Oe)
+0.000e+00    // L3_Hex_L (Oe)
+0.000e+00    // L4_Hex_L (Oe)
+1.016e+03    // L5_Hex_L (Oe)
+0.000e+00    // L6_Hex_L (Oe)
+1000000000      // Number of time steps for head to travel a distance delta_x at head speed v 
+1000000000     // Number of time steps of the shortest field cycle (derived) 
+///////////////////////////////////////////////////////// 
